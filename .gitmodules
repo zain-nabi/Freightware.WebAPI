@@ -1,0 +1,6 @@
+[submodule "src/Freightware.WebApi/triton.core"]
+	path = src/Freightware.WebApi/triton.core
+	url = http://texzadcelastic/triton-express/triton.core.git
+[submodule "src/Freightware.WebApi/triton.service"]
+	path = src/Freightware.WebApi/triton.service
+	url = http://texzadcelastic/triton-express/triton.service.git

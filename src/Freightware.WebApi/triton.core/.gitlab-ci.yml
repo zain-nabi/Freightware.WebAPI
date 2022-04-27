@@ -1,0 +1,14 @@
+variables:
+  NUGET_PATH: 'C:\NuGet\nuget.exe'
+  MSBUILD_PATH: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\MSBuild.exe'
+
+core_job:
+    stage: 'build'
+    tags:
+        - dev
+    script:
+        - 'echo Restoring Triton Core...'
+        - '& "$env:NUGET_PATH" restore'  # restore Nuget dependencies
+    
+        - 'echo Building Triton.Core...'
+        - '& "$env:MSBUILD_PATH" /p:Configuration=Release'  # build the project
